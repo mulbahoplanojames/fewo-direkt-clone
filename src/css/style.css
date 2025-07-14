@@ -597,3 +597,35 @@ body {
   padding-bottom: 14px;
   font-weight: 100;
 }
+
+/* Todo: Destination CSS */
+.destination {
+  margin-bottom: 4rem;
+}
+
+.destination-title {
+  padding-bottom: 1rem;
+}
+
+.destination-cards details {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid gainsboro;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.destination-cards summary {
+  padding: 0.5rem 0.2rem;
+  font-size: 1rem;
+}
+
+.links-wripper {
+  display: flex;
+  gap: 1rem;
+}
+
+.links-card {
+  display: flex;
+  flex-wrap: wrap;
+}
