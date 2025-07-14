@@ -17,9 +17,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5% 0px;
+  padding: 1.7% 0px;
 }
 
 .nav-links {
@@ -57,4 +57,63 @@
 
 .nav-links li a:hover {
   color: var(--primary-clr);
+}
+
+/* ========================== */
+
+.home-hero {
+  padding: 12rem 0px;
+  /* background: red; */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("/public/2adf56af_w.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* padding: ; */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-title {
+  font-size: 2.5rem;
+  color: #fff;
+  padding-bottom: 1.3rem;
+}
+
+.booking-form-wripper {
+  padding: 0.8rem 0.8rem;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.booking-form-card {
+  padding: 5px 1.5%;
+  border: 1px solid var(--secondary-clr);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  cursor: pointer;
+}
+
+.booking-form-card span {
+  color: var(--text-clr);
+  font-size: 12px;
+}
+
+.booking-form-card p {
+  color: var(--text-clr);
+  font-size: 17px;
+  padding-top: 3px;
+}
+
+.location-icon {
+  width: 25px;
+  height: 25px;
 }
