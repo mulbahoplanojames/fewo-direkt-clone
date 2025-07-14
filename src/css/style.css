@@ -180,3 +180,77 @@ body {
   border-radius: 30px;
   cursor: pointer;
 }
+
+/* ========================== */
+
+.accommodation {
+  margin: 2.3rem 0px;
+}
+
+.accommodation-title {
+  font-size: 26px;
+  padding-bottom: 1.3rem;
+}
+.accommodation-cards {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.accommodation-cards {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.accommodation-card {
+  position: relative;
+  width: 230px;
+  height: 300px;
+  background: red;
+  border-radius: 15px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.accommodation-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.accommodation-card-content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-weight: bolder;
+  font-size: 13px;
+}
+
+/* ================== */
+
+.week-end-trips-title {
+  font-size: 26px;
+  padding-bottom: 8px;
+}
+
+.week-end-trips-card {
+  width: 250px;
+  height: 300px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.weekend-trip-image-wripper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.weekend-trip-image-wripper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
