@@ -18,7 +18,25 @@
 
         <!-- navlinks -->
         <menu class="nav-links">
-          <button class="download-app">Download App</button>
+          <div class="wripper">
+            <button class="download-app">Download App</button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-menu-icon lucide-menu menu-icon"
+            >
+              <path d="M4 12h16" />
+              <path d="M4 18h16" />
+              <path d="M4 6h16" />
+            </svg>
+          </div>
           <li><a href="#">Trip Planner</a></li>
           <li><a href="#">Register Accommodation</a></li>
           <li><a href="#">Help</a></li>
@@ -80,18 +98,20 @@
       </section>
 
       <!--Todo: sign up cta  -->
-      <section class="signup-cta container">
-        <div class="cta-content">
-          <div class="message-icon-wripper">
-            <img src="/public/message.svg" alt="message" />
+      <div class="container">
+        <section class="signup-cta">
+          <div class="cta-content">
+            <div class="message-icon-wripper">
+              <img src="/public/message.svg" alt="message" />
+            </div>
+            <h4>
+              Sign up to send the host a message and get more details about
+              accommodation.
+            </h4>
           </div>
-          <h4>
-            Sign up to send the host a message and get more details about
-            accommodation.
-          </h4>
-        </div>
-        <button class="signup-button">Sign up</button>
-      </section>
+          <button class="signup-button">Sign up</button>
+        </section>
+      </div>
 
       <!--Todo: Accommodation section  -->
       <section class="accommodation">
@@ -502,7 +522,6 @@
       </section>
 
       <!-- Beach Accommodation Section  -->
-
       <section class="week-end-trips">
         <div class="container">
           <h2 class="week-end-trips-title">

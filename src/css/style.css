@@ -15,9 +15,13 @@
   --bg-clr: #fff;
 }
 body {
-  /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 #navbar {
@@ -28,15 +32,27 @@ body {
   margin: 0 auto;
   padding: 1.7% 0px;
 }
-
 .nav-links {
   flex: 1;
   text-align: end;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  /* background: olive; */
+  gap: 25px;
 }
 
 .nav-links li {
-  display: inline-block;
-  padding: 0px 13px;
+  list-style-type: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-clr);
+}
+
+.nav-links li a:hover {
+  color: var(--primary-clr);
 }
 
 .nav-links .download-app {
@@ -53,23 +69,47 @@ body {
   color: var(--primary-clr);
 }
 
-.nav-links li {
-  list-style-type: none;
+.wripper {
+  display: flex;
+  justify-content: end;
+  align-content: center;
+  flex: 1;
+  gap: 10px;
 }
 
-.nav-links li a {
-  text-decoration: none;
-  color: var(--text-clr);
+.menu-icon {
+  display: none;
 }
 
-.nav-links li a:hover {
-  color: var(--primary-clr);
+/* important: Navbar Responsive design CSS */
+
+/*note: median screen md  */
+@media screen and (max-width: 992px) {
+  .nav-links {
+    text-align: start;
+  }
+
+  .nav-links li {
+    display: none;
+    padding: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* note:  small screen sm */
+@media screen and (max-width: 768px) {
+  #navbar {
+    padding: 1.7% 3%;
+  }
 }
 
 /* Todo: Hero Section  */
 
 .home-hero {
-  padding: 12rem 0px;
+  padding: 12rem 1rem;
   /* background: red; */
   background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
     url("/public/hero-img.avif");
@@ -79,10 +119,6 @@ body {
   /* padding: ; */
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .hero-title {
   font-size: 2.5rem;
   color: #fff;
@@ -94,12 +130,12 @@ body {
   padding: 0.8rem 0.8rem;
   background: #fff;
   border-radius: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 12px;
 }
 .booking-form-card {
+  grid-column: span 2;
   padding: 5px 1.5%;
   border: 1px solid var(--secondary-clr);
   border-radius: 10px;
@@ -140,17 +176,50 @@ body {
   opacity: 0.8;
 }
 
+/* important: Booking Form Responsive design CSS */
+
+@media screen and (max-width: 992px) {
+  .home-hero {
+    padding: 9rem 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-hero {
+    padding: 4rem 1.3rem;
+  }
+  .booking-form-wripper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .booking-form-card {
+    grid-column: span 1;
+  }
+
+  .search-location-btn {
+    padding: 2% 4%;
+  }
+}
+
 /* Todo: Sign Up CTA Section  */
 
 .signup-cta {
-  padding: 1.4rem 1rem;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
+  padding: 1.4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
   background: var(--secondary-clr);
   color: #fff;
   border-radius: 20px;
   margin-top: 2rem;
+}
+
+.cta-content {
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
 }
 
 .message-icon-wripper {
@@ -168,12 +237,6 @@ body {
   height: 30px;
 }
 
-.cta-content {
-  display: flex;
-  align-items: center;
-  gap: 1.3rem;
-}
-
 .signup-button {
   padding: 0.5rem;
   background: var(--primary-clr);
@@ -183,7 +246,27 @@ body {
   cursor: pointer;
 }
 
-/* Todo: accommodation CSS */
+/* important: Sign Up CTA Responsive design CSS */
+
+@media screen and (max-width: 992px) {
+  .signup-cta {
+    padding: 1.4rem 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .signup-cta {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 1.4rem 1rem;
+    gap: 12px;
+    place-content: center;
+  }
+  .cta-content {
+    grid-column: span 1;
+  }
+}
+
+/* note: accommodation CSS start here  */
 
 .accommodation {
   margin: 2.3rem 0px;
@@ -230,7 +313,9 @@ body {
   font-size: 13px;
 }
 
-/* Todo: week end trips CSS */
+/* note: accommodation css end here */
+
+/* note: weekend trips CSS start here */
 
 .week-end-trips {
   margin: 2.3rem 0px;
@@ -358,22 +443,22 @@ body {
   font-size: 13px;
 }
 
-/* Todo : beach view CSS */
+/* note: weekend trips css end here */
+
+/* note: beach view CSS start here */
 
 .beach-view {
   margin: 2.3rem 0px;
 }
 
 .beach-view-cards {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
 .beach-view-card {
-  width: 49%;
+  width: 100%;
 }
 
 .beach-view-card .beach-view-card-image-wripper {
@@ -400,7 +485,18 @@ body {
   font-weight: bold;
 }
 
-/* Todo: private accommodation CSS */
+/* important: Responsive design for two beach cards  */
+
+@media screen and (max-width: 768px) {
+  .beach-view-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* Note: two beach cards responsive design ends here */
+
+/* note: private accommodation CSS start here */
 .private-accommodation {
   margin: 2.8rem 1rem;
   border: 1px solid gray;
@@ -409,16 +505,14 @@ body {
 }
 
 .private-accommodation-cards {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 30px;
   position: relative;
 }
 
 .private-accommodation-card-1 {
-  width: 30%;
+  grid-column: span 2;
   height: fit-content;
 }
 .private-accommodation-title {
@@ -431,7 +525,7 @@ body {
 }
 
 .private-accommodation-card-2 {
-  width: 65%;
+  grid-column: span 3;
   height: fit-content;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -477,7 +571,6 @@ body {
 .private-left-arrow,
 .private-right-arrow {
   position: absolute;
-
   top: 45%;
   cursor: pointer;
   color: var(--primary-clr);
@@ -500,7 +593,40 @@ body {
   right: -10px;
 }
 
-/* Todo: Features CSS  */
+@media screen and (max-width: 992px) {
+  .private-accommodation-title {
+    font-size: 1.6rem;
+  }
+
+  .private-left-arrow,
+  .private-right-arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .private-accommodation-title {
+    font-size: 1.4rem;
+  }
+  .private-accommodation-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .private-accommodation-card-1 {
+    grid-column: span 1;
+  }
+  .private-accommodation-card-2 {
+    grid-column: span 1;
+  }
+
+  .private-accommodation {
+    margin: 1rem 0px;
+  }
+}
+
+/* note: private accommodation CSS end here */
+
+/* note: Features CSS starts here  */
 .features {
   margin: 3rem 0px;
 }
@@ -530,6 +656,23 @@ body {
 .features-card-description {
   font-size: 15px;
 }
+
+/* important: Features Responsive design CSS */
+
+@media screen and (max-width: 992px) {
+  .features-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .features-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* note: Features CSS ends here  */
 
 /* Todo: Advertise accommodation CSS */
 .advertise-accommodation {
