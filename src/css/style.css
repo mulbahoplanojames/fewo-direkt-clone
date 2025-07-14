@@ -279,9 +279,10 @@ body {
   position: absolute;
   top: 50%;
   cursor: pointer;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--primary-clr);
+  background: #fff;
   border-radius: 50%;
+  border: 2px dotted var(--primary-clr);
   width: 25px;
   height: 25px;
   display: flex;
@@ -400,9 +401,9 @@ body {
 
 /* Todo: private accommodation CSS */
 .private-accommodation {
-  margin: 2.3rem 0px;
+  margin: 2.8rem 1rem;
   border: 1px solid gray;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 1rem;
 }
 
@@ -412,16 +413,20 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-}
-
-.private-accommodation-card {
   position: relative;
 }
 
 .private-accommodation-card-1 {
   width: 30%;
   height: fit-content;
-  background: rebeccapurple;
+}
+.private-accommodation-title {
+  font-size: 2.6rem;
+  padding-bottom: 10px;
+}
+
+.private-accommodation-description {
+  font-size: 18px;
 }
 
 .private-accommodation-card-2 {
@@ -430,6 +435,13 @@ body {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  position: relative;
+}
+
+.private-accommodation-card-2 {
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .private-accommodation-card-image-wripper-card {
@@ -459,4 +471,30 @@ body {
   span {
     padding: 5px;
   }
+}
+
+.private-left-arrow,
+.private-right-arrow {
+  position: absolute;
+
+  top: 45%;
+  cursor: pointer;
+  color: var(--primary-clr);
+  background: #fff;
+  border-radius: 50%;
+  border: 2px dotted var(--primary-clr);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.private-left-arrow {
+  left: 380px;
+}
+
+.private-right-arrow {
+  right: -10px;
 }
