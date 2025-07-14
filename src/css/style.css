@@ -117,3 +117,17 @@
   width: 25px;
   height: 25px;
 }
+
+.search-location-btn {
+  padding: 1.2% 2%;
+  background: var(--primary-clr);
+  color: #fff;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.search-location-btn:hover {
+  opacity: 0.8;
+}
