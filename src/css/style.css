@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #1668e3;
+  --secondary-clr: #191e3b;
+  --text-clr: #191d3d;
+  --bg-clr: #fff;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5% 0px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: end;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links .download-app {
+  padding: 5px 2%;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-links .download-app:hover {
+  background: var(--bg-clr);
+  color: var(--primary-clr);
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-clr);
+}
+
+.nav-links li a:hover {
+  color: var(--primary-clr);
+}
